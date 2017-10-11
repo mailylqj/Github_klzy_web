@@ -1,0 +1,50 @@
+<component name="libraryTable">
+  <library name="aopalliance-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jackson-annotations-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jackson-core-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jackson-databind-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-example-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-filter-compression-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-http-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-integration-beans-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-integration-jmx-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-integration-ognl-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-integration-xbean-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-statemachine-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-transport-apr-2.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/protobuf-java-2.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/slf4j-api-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-aspects-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-beans-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-context-support-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-core-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-instrument-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-instrument-tomcat-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-jdbc-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-jms-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-messaging-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-orm-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-oxm-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-test-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-tx-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-portlet-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/tomcat-jdbc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/tomcat-juli.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
