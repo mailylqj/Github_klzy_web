@@ -11,7 +11,7 @@ public class WebContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         BalanceMinaClient.getInstance().start();
-       // JDBC_Pool.getInstance();
+        JDBC_Pool.getInstance();
     }
 
     @Override

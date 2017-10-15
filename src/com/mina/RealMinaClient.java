@@ -25,7 +25,7 @@ public class RealMinaClient {
     private int port = 0;
     private IoConnector connector;
     private RealHandler clientHandler;
-    private Queue<IoSession> sessions_queue = new LinkedList<>();
+    private Deque<IoSession> sessions_deque = new LinkedList<>();
     private ValueCenter valueCenter  = ValueCenter.getInstance();
     private Thread regweb_thread  = null;
     private Logger log = Logger.getLogger(getClass());
@@ -35,8 +35,8 @@ public class RealMinaClient {
         return instance;
     }
 
-    public Queue<IoSession> getSessions_queue() {
-        return sessions_queue;
+    public Deque<IoSession> getSessions_deque() {
+        return sessions_deque;
     }
 
     public RealMinaClient() {
@@ -50,11 +50,16 @@ public class RealMinaClient {
         for (int i=0;i<5;i++){
             IoSession session = creat_Connection();
             if (session != null) {
-                sessions_queue.offer(session);
+                sessions_deque.offerLast(session);
                 log.info("real---创建--");
             }
         }
+    }
 
+    /**
+     *
+     */
+    public void regThreadStart(){
         if (regweb_thread ==  null){
             regweb_thread =  new regWeb_Thread();
             regweb_thread.start();
@@ -87,7 +92,6 @@ public class RealMinaClient {
                 config.setReadBufferSize(100 * 1024);
                 config.setIdleTime(IdleStatus.BOTH_IDLE, 300);
                 //clientHandler.sessionOpened(session);
-
                 return session;
             }else
                 return null;
@@ -105,13 +109,24 @@ public class RealMinaClient {
      */
     public boolean send(ByteBuffer b) {
         IoBuffer buffer = IoBuffer.wrap(b);
-        IoSession session = sessions_queue.poll();
+        IoSession session = sessions_deque.pollFirst();
 
         if (session != null) {
             session.write(buffer);
             return true;
         }else{
             BalanceMinaClient.getInstance().start();
+            try {
+                Thread.sleep(500);
+                session = sessions_deque.pollFirst();
+                if (session != null) {
+                    session.write(buffer);
+                    return true;
+                }else
+                    return false;
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         return  false;
     }

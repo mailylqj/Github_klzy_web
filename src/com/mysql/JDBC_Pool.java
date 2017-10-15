@@ -1,5 +1,6 @@
 package com.mysql;
 
+import com.mina.RealMinaClient;
 import com.util.const_value;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
@@ -30,7 +31,7 @@ public class JDBC_Pool {
 	 */
 	public void init() {
 		PoolProperties pool = new PoolProperties(); // 池管理对象实例化
-		//pool.setUrl("jdbc:mysql://"+"101.132.233.218"+":3306/db_klzy?characterEncoding=utf8&autoReconnect=true"); // 设置url
+		//pool.setUrl("jdbc:mysql://"+"192.168.8.101"+":3306/db_klzy?characterEncoding=utf8&autoReconnect=true"); // 设置url
 
 		pool.setUrl("jdbc:mysql://rm-uf641vi1s896vlis1o.mysql.rds.aliyuncs.com:3306/db_klzy?characterEncoding=utf8&autoReconnect=true"); // 设置url
 
@@ -54,7 +55,7 @@ public class JDBC_Pool {
 		pool.setTimeBetweenEvictionRunsMillis(1000 * 60 * 30);
 		pool.setMinEvictableIdleTimeMillis(1000 * 60 * 60);
 
-		pool.setInitialSize(10);// 初始化连接池时,创建连接个数
+		pool.setInitialSize(50);// 初始化连接池时,创建连接个数
 		pool.setMaxActive(1000);// 连接池最大并发容量
 		pool.setMaxWait(10000);// 超时等待时间以毫秒为单位 无连接等待时间
 		pool.setRemoveAbandonedTimeout(60);// 超时时间(以秒数为单位)
@@ -71,6 +72,7 @@ public class JDBC_Pool {
 		dataSource = new DataSource();// TOMCAT 的数据源
 		dataSource.setPoolProperties(pool); // 池与数据源绑定
 		syncGetConnection();
+		RealMinaClient.getInstance().regThreadStart();
 	}
 
 	/**

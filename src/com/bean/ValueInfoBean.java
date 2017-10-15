@@ -30,9 +30,6 @@ public class ValueInfoBean {
     private int max;
     //  min
     private int min;
-    //  排序
-    private int index;
-
     //************** write
     private int writeadd;
 
@@ -40,7 +37,7 @@ public class ValueInfoBean {
     //……………………………………………………
 
 
-    public ValueInfoBean(int type, String name, float value, String unit, int dataType, int decimals, int rwType, int permission, String showType, int max, int min, int index, int writeadd) {
+    public ValueInfoBean(int type, String name, float value, String unit, int dataType, int decimals, int rwType, int permission, String showType, int max, int min,  int writeadd) {
         this.type = type;
         this.name = name;
         this.value = value;
@@ -52,7 +49,6 @@ public class ValueInfoBean {
         this.showType = showType;
         this.max = max;
         this.min = min;
-        this.index = index;
         this.writeadd = writeadd;
     }
 
@@ -143,14 +139,6 @@ public class ValueInfoBean {
 
     public void setMin(int min) {
         this.min = min;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
     }
 
     public int getWriteadd() {

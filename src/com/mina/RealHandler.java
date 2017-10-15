@@ -42,6 +42,7 @@ public class RealHandler extends IoHandlerAdapter {
 	@Override
 	public void sessionClosed(IoSession iosession) throws Exception {
 		//System.out.println("real——客户端会话关闭");
+		RealMinaClient.getInstance().getSessions_deque().removeFirstOccurrence(iosession);
 		super.sessionClosed(iosession);
 	}
 

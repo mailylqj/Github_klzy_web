@@ -70,7 +70,7 @@ public class ReceiveCmd {
             unreg_allonline(data_rep);
         }
 
-        RealMinaClient.getInstance().getSessions_queue().offer(session);
+        RealMinaClient.getInstance().getSessions_deque().offerLast(session);
     }
 
     private void alllastestdata(server_lastestdata_response data_rep) {

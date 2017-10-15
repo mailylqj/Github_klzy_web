@@ -85,8 +85,8 @@ public class SqlCmd {
             List<String> online_device = valueCenter.getAll_OnlineDevice();
             List<DeviceBean> return_list = new ArrayList<>();
             List<String> reg_list = new ArrayList<>();
-            if (valueCenter.getSs_map().get(sessionid) !=null) {
-               reg_list = valueCenter.getWebsoket_map().get(valueCenter.getSs_map().get(sessionid));
+            if (valueCenter.getSs_map().get(sessionid) != null) {
+                reg_list = valueCenter.getWebsoket_map().get(valueCenter.getSs_map().get(sessionid));
             }
 
             for (Map<String, String> map : sql_map) {
@@ -128,8 +128,7 @@ public class SqlCmd {
                 return list;
             } else {
                 List<Map<String, String>> res_list = sqlConfigFileByName(name);
-                Map<Integer, String> showtype_map = getShowTypeMap();
-                list = build_ValueInfoBean(res_list, showtype_map);
+                list = build_ValueInfoBean(res_list);
                 valueCenter.getConfig_map().put(name, list);
                 return list;
             }
@@ -142,8 +141,7 @@ public class SqlCmd {
                 return list;
             } else {
                 List<Map<String, String>> res_list = sqlConfigFileByName(filename);
-                Map<Integer, String> showtype_map = getShowTypeMap();
-                list = build_ValueInfoBean(res_list, showtype_map);
+                list = build_ValueInfoBean(res_list);
                 valueCenter.getConfig_map().put(name, list);
                 return list;
             }
@@ -151,15 +149,15 @@ public class SqlCmd {
         return null;
     }
 
-    // 获取对应名
-    private Map<Integer, String> getShowTypeMap() {
-        Map<Integer, String> showtype_map = valueCenter.getShowtype_map();
-        if (showtype_map == null || showtype_map.size() == 0) {
-            showtype_map = sqlShowTypeMap();
-            valueCenter.setShowtype_map(showtype_map);
-        }
-        return showtype_map;
-    }
+// 获取对应名
+//    private Map<Integer, String> getShowTypeMap() {
+//        Map<Integer, String> showtype_map = valueCenter.getShowtype_map();
+//        if (showtype_map == null || showtype_map.size() == 0) {
+//            showtype_map = sqlShowTypeMap();
+//            valueCenter.setShowtype_map(showtype_map);
+//        }
+//        return showtype_map;
+//    }
 
     //数据查询
     private Map<Integer, String> sqlShowTypeMap() {
@@ -181,17 +179,15 @@ public class SqlCmd {
      * @return
      */
     public synchronized List<ValueInfoBean> updateConfigInfo(String name, int type) {
-        Map<Integer, String> showtype_map = sqlShowTypeMap();
-        valueCenter.setShowtype_map(showtype_map);
 
         if (type == 0) {
             List<Map<String, String>> res_list = sqlConfigFileByName(name);
-            List<ValueInfoBean> list = build_ValueInfoBean(res_list, showtype_map);
+            List<ValueInfoBean> list = build_ValueInfoBean(res_list);
             valueCenter.getConfig_map().put(name, list);
             return list;
         } else if (type == 1) {
             List<Map<String, String>> res_list = sqlConfigFileByUID(name);
-            List<ValueInfoBean> list = build_ValueInfoBean(res_list, showtype_map);
+            List<ValueInfoBean> list = build_ValueInfoBean(res_list);
             valueCenter.getConfig_map().put(name, list);
             return list;
         }
@@ -204,7 +200,7 @@ public class SqlCmd {
      * @param res_list
      * @return
      */
-    private List<ValueInfoBean> build_ValueInfoBean(List<Map<String, String>> res_list, Map<Integer, String> showtype_map) {
+    private List<ValueInfoBean> build_ValueInfoBean(List<Map<String, String>> res_list) {
 
         int writeadd = 1;
         List<ValueInfoBean> config_list = new ArrayList<>();
@@ -218,10 +214,9 @@ public class SqlCmd {
                     Integer.valueOf(map.get("data_decimal")),
                     Integer.valueOf(map.get("data_rwtype")),
                     Integer.valueOf(map.get("data_level")),
-                    showtype_map.get(Integer.valueOf(map.get("data_showtype"))),
+                    map.get("data_showname"),
                     Integer.valueOf(map.get("data_max")),
                     Integer.valueOf(map.get("data_min")),
-                    Integer.valueOf(map.get("data_index")),
                     writeadd);
 
             config_list.add(bean);
@@ -247,7 +242,20 @@ public class SqlCmd {
         if (filename.indexOf(".txt") > 0)
             filename = filename.substring(0, filename.indexOf(".txt"));
         List<Map<String, String>> res_list = new ArrayList<>();
-        String sql = "select * from tb_config where filename = ? order by data_index";
+        String sql = "SELECT " +
+                "tb_config.type," +
+                "tb_config.data_name," +
+                "tb_config.data_units," +
+                "tb_config.data_type," +
+                "tb_config.data_decimal," +
+                "tb_config.data_rwtype," +
+                "tb_config.data_level," +
+                "tb_config.data_max," +
+                "tb_config.data_min," +
+                "tb_showtype.data_showname " +
+                "from tb_config,tb_showtype " +
+                "where (tb_config.data_showtype=tb_showtype.id)and(tb_config.filename=?) " +
+                "order by tb_config.data_index;";
         ArrayList<Object> param = new ArrayList<>();
         param.add(filename);
         res_list = JDBC_Pool.getInstance().queryForMap(sql, param);
@@ -259,7 +267,20 @@ public class SqlCmd {
      */
     public List<Map<String, String>> sqlConfigFileByUID(String uid) {
         List<Map<String, String>> res_list = new ArrayList<>();
-        String sql = "select * from tb_config where filename = (select configfile_name from tb_device where device_id =? ) order by data_index";
+        String sql = "SELECT " +
+                "tb_config.type," +
+                "tb_config.data_name," +
+                "tb_config.data_units," +
+                "tb_config.data_type," +
+                "tb_config.data_decimal," +
+                "tb_config.data_rwtype," +
+                "tb_config.data_level," +
+                "tb_config.data_max," +
+                "tb_config.data_min," +
+                "tb_showtype.data_showname" +
+                "from tb_config,tb_showtype" +
+                "where (tb_config.data_showtype=tb_showtype.id) and (tb_config.filename= (select configfile_name from tb_device where device_id =? ))" +
+                "order by tb_config.data_index;";
         ArrayList<Object> param = new ArrayList<>();
         param.add(uid);
         res_list = JDBC_Pool.getInstance().queryForMap(sql, param);
@@ -295,10 +316,10 @@ public class SqlCmd {
      * @param level
      * @return
      */
-    public int addUser(String username, String password, int type, String pro_company, String use_company, int level,
-                       String imei) {
+    public int User_Add(String username, String password, int type, String pro_company, String use_company, int level,
+                        String imei) {
         int result = 0;
-        String sql = "insert into tb_user (username, password, type, pro_company, use_company, level) values(?, ?, ?, ?, ?, ? ) ";
+        String sql = "insert into tb_user (username, password, type, pro_company, use_company, level,imei) values(?, ?, ?, ?, ?, ?, ?) ";
         ArrayList<Object> param = new ArrayList<Object>();
         param.add(username);
         param.add(password);
@@ -311,12 +332,17 @@ public class SqlCmd {
         return result;
     }
 
-    public int delUser(List<String> username_list) {
+    public int User_Del(List<String> username_list) {
         int result = 0;
+        boolean frist = false;
         String sql = "delete from tb_user where username in (";
         ArrayList<Object> list = new ArrayList<Object>();
         for (String param : username_list) {
-            sql = sql + "?,";
+            if (!frist) {
+                sql = sql + "?";
+                frist = true;
+            } else
+                sql = sql + ",?";
             list.add(param);
         }
         sql += ");";
@@ -324,30 +350,78 @@ public class SqlCmd {
         return result;
     }
 
-    public int changePassword(String username, String password) {
+    public int User_Cpwd(String username, String opwd, String npwd) {
         int result = 0;
-        String sql = "update tb_user set password=? where username=? ";
+        String sql = "update tb_user set password=? where username=? and passwoed = ? ";
         ArrayList<Object> param = new ArrayList<Object>();
-        param.add(password);
+        param.add(npwd);
         param.add(username);
+        param.add(opwd);
         result = JDBC_Pool.getInstance().execute(sql, param);
         return result;
     }
 
+    public void User_SelectByName(String username, String id) {
+        String key  = "usn"+"#"+id;
+        UserBean user = valueCenter.getSession_userinfo().get(id);
+        if (user.getLevel() >= 2) {
+            String pro_company = user.getPro_company();
+            String sql = "select * from tb_user where username=? and pro_company = ?";
+            ArrayList<Object> param = new ArrayList<Object>();
+            param.add(username);
+            param.add(pro_company);
+            Map<String, String> sql_map = JDBC_Pool.getInstance().queryForOnceMap(sql, param);
 
-    public int updateUser(String password, int type, String pro_company, String use_company, int level, String imei,
-                          String username) {
+            UserBean userBean  =  new UserBean(sql_map.get("username"),"",Integer.valueOf(sql_map.get("type")),
+                    sql_map.get("pro_company"),sql_map.get("use_company"),Integer.valueOf(sql_map.get("level")),sql_map.get("imei"));
 
+            DeferredResult<UserBean> result = (DeferredResult<UserBean>) valueCenter.getSession_deferredResult_map().get("");
+            result.setResult(userBean);
+        } else {
+            DeferredResult<Map<String, Integer>> result = (DeferredResult<Map<String, Integer>>) valueCenter.getSession_deferredResult_map().get(key);
+            Map<String, Integer> map = new LinkedHashMap<>();
+            map.put("result", ErrorCode.PERMISSION);
+            result.setResult(map);
+        }
+    }
+
+    public void User_SelectAll( String id) {
+        String key  = "usa"+"#"+id;
+        UserBean user = valueCenter.getSession_userinfo().get(id);
+        if (user.getLevel() >= 2) {
+            String pro_company = user.getPro_company();
+            String sql = "select * from tb_user where  pro_company = ?";
+            ArrayList<Object> param = new ArrayList<Object>();
+            param.add(pro_company);
+            List<Map<String, String>> sql_map = JDBC_Pool.getInstance().queryForMap(sql, param);
+            List<UserBean> user_list  = new ArrayList<>();
+            for (Map<String, String> map : sql_map) {
+                UserBean userBean = new UserBean(map.get("username"), "", Integer.valueOf(map.get("type")),
+                        map.get("pro_company"), map.get("use_company"), Integer.valueOf(map.get("level")), map.get("imei"));
+
+                user_list.add(userBean);
+            }
+            DeferredResult<List<UserBean>> result = (DeferredResult<List<UserBean>>) valueCenter.getSession_deferredResult_map().get("");
+            result.setResult(user_list);
+        } else {
+            DeferredResult<Map<String, Integer>> result = (DeferredResult<Map<String, Integer>>) valueCenter.getSession_deferredResult_map().get(key);
+            Map<String, Integer> map = new LinkedHashMap<>();
+            map.put("result", ErrorCode.PERMISSION);
+            result.setResult(map);
+        }
+    }
+
+    public int User_Update(String username, String password, int type, String pro_company, String use_company, int level, String imei) {
         int result = 0;
         String sql = "update tb_user set password=? ,type=?,pro_company=?,use_company=?,level=?,imei=? where username=? ";
         ArrayList<Object> param = new ArrayList<Object>();
+        param.add(username);
         param.add(password);
         param.add(type);
         param.add(pro_company);
         param.add(use_company);
         param.add(level);
         param.add(imei);
-        param.add(username);
         result = JDBC_Pool.getInstance().execute(sql, param);
         return result;
 

@@ -52,8 +52,6 @@ public class ValueCenter {
     // config list
     Map<String, List<ValueInfoBean>> config_map = new ConcurrentHashMap<>();
 
-    //显示
-    Map<Integer, String> showtype_map = new ConcurrentHashMap<>();
 
     private int RegOnlien = 0;
     private int RegLastestData = 0;
@@ -118,14 +116,6 @@ public class ValueCenter {
 
 
     /****************************** get set 方法 ************************************/
-
-    public Map<Integer, String> getShowtype_map() {
-        return showtype_map;
-    }
-
-    public void setShowtype_map(Map<Integer, String> showtype_map) {
-        this.showtype_map = showtype_map;
-    }
 
     public Map<String, List<ValueInfoBean>> getConfig_map() {
         return config_map;

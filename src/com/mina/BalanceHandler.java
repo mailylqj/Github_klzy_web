@@ -21,7 +21,7 @@ public class BalanceHandler extends IoHandlerAdapter {
 
 	@Override
 	public void exceptionCaught(IoSession session, Throwable cause) throws Exception {
-		System.out.println("balance——客户端异常");
+		//System.out.println("balance——客户端异常");
 		super.exceptionCaught(session, cause);
 
 	}
@@ -35,7 +35,7 @@ public class BalanceHandler extends IoHandlerAdapter {
 
 	@Override
 	public void sessionClosed(IoSession iosession) throws Exception {
-		System.out.println("balance——客户端会话关闭");
+		//System.out.println("balance——客户端会话关闭");
 		super.sessionClosed(iosession);
 
 	}
@@ -48,7 +48,7 @@ public class BalanceHandler extends IoHandlerAdapter {
 
 	@Override
 	public void sessionIdle(IoSession iosession, IdleStatus idlestatus) throws Exception {
-		System.out.println("balance——客户端会话休眠");
+		//System.out.println("balance——客户端会话休眠");
 		super.sessionIdle(iosession, idlestatus);
 	}
 

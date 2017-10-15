@@ -1,7 +1,6 @@
 package com.springmvc;
 
 import com.application.ValueCenter;
-import com.bean.DeviceBean;
 import com.bean.ValueInfoBean;
 import com.mysql.SqlCmd;
 import com.pack.SendCmd;
@@ -16,9 +15,7 @@ import org.springframework.web.context.request.async.DeferredResult;
 import org.springframework.web.socket.WebSocketSession;
 
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping("ajax")
@@ -32,7 +29,7 @@ public class SpringMvcController {
     @ResponseBody
     @RequestMapping(value = "/Login", method = RequestMethod.POST)
     public DeferredResult<Object> login(@RequestBody(required = true) Map<String, Object> map, HttpSession session) {
-
+        //log.error("Thread:  "+Thread.currentThread().getId() + "  time: "+ System.currentTimeMillis());
         String key = "login" + "#" + session.getId();
         DeferredResult<Object> result = new DeferredResult<>();
         valueCenter.getSession_deferredResult_map().put(key, result);
@@ -136,7 +133,7 @@ public class SpringMvcController {
         if (isLogin(result, session)) {
             String key = "config" + "#" + session.getId();
             valueCenter.getSession_deferredResult_map().put(key, result);
-            List<ValueInfoBean> list  = sql.updateConfigInfo(String.valueOf(req_map.get("filename")), 0);
+            List<ValueInfoBean> list = sql.updateConfigInfo(String.valueOf(req_map.get("filename")), 0);
 
             DeferredResult<List<ValueInfoBean>> res = (DeferredResult<List<ValueInfoBean>>) valueCenter.getSession_deferredResult_map().get("config" + "#" + session.getId());
             result.setResult(list);
@@ -152,13 +149,13 @@ public class SpringMvcController {
             String key = "control" + "#" + session.getId();
             valueCenter.getSession_deferredResult_map().put(key, result);
             String d = String.valueOf(req_map.get("value"));
-            String uid  = String.valueOf(req_map.get("uid"));
+            String uid = String.valueOf(req_map.get("uid"));
             String name = String.valueOf(req_map.get("name"));
-            List<ValueInfoBean> list  = sql.getconfigfile(uid,1);
+            List<ValueInfoBean> list = sql.getconfigfile(uid, 1);
 
-            for(ValueInfoBean bean:list){
-                if (bean.getName().equals(name)){
-                    send.control(uid, "02883203826", bean.getDataType(),bean.getDecimals(), bean.getWriteadd(), Float.valueOf(d), session.getId());
+            for (ValueInfoBean bean : list) {
+                if (bean.getName().equals(name)) {
+                    send.control(uid, "02883203826", bean.getDataType(), bean.getDecimals(), bean.getWriteadd(), Float.valueOf(d), session.getId());
                     break;
                 }
             }
@@ -228,6 +225,106 @@ public class SpringMvcController {
         return result;
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/userAdd", method = RequestMethod.POST)
+    public DeferredResult<Object> userAdd(@RequestBody(required = true) Map<String, Object> req_map, HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            int res = sql.User_Add((String) req_map.get("name"), (String) req_map.get("password"), (int) req_map.get("type"),
+                    (String) req_map.get("pro_company"), (String) req_map.get("use_company"), (int) req_map.get("level"), (String) req_map.get("imei"));
+            Map<String, Object> map = new HashMap<>();
+            if (res > 0)
+                map.put("result", ErrorCode.SUCCESS);
+            else
+                map.put("result", ErrorCode.SQL_EXECUTE_ERROR);
+            result.setResult(map);
+        }
+        return result;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/userDel", method = RequestMethod.POST)
+    public DeferredResult<Object> userDel(@RequestBody(required = true) Map<String, Object> req_map, HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            List<String> username_list = new ArrayList<>();
+            username_list = (ArrayList)req_map.get("namelist");
+            int res = sql.User_Del(username_list);
+            Map<String, Object> map = new HashMap<>();
+            if (res > 0)
+                map.put("result", ErrorCode.SUCCESS);
+            else
+                map.put("result", ErrorCode.SQL_EXECUTE_ERROR);
+            result.setResult(map);
+        }
+        return result;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/userCpwd", method = RequestMethod.POST)
+    public DeferredResult<Object> userChangepwd(@RequestBody(required = true) Map<String, Object> req_map, HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            String  username = (String)req_map.get("name");
+            String  opwd = (String)req_map.get("original_pwd");
+            String  npwd = (String)req_map.get("new_pwd");
+            int res = sql.User_Cpwd(username ,opwd,npwd);
+            Map<String, Object> map = new HashMap<>();
+            if (res > 0)
+                map.put("result", ErrorCode.SUCCESS);
+            else
+                map.put("result", ErrorCode.PWD_ERROR);
+            result.setResult(map);
+        }
+        return result;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/userSelectByName", method = RequestMethod.POST)
+    public DeferredResult<Object> userSelectByName(@RequestBody(required = true) Map<String, Object> req_map, HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            String key = "usn"+"#"+session.getId();
+            valueCenter.getSession_deferredResult_map().put(key,result);
+            String username = (String) req_map.get("namelist");
+            sql.User_SelectByName(username,session.getId());
+        }
+        return result;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/userSelectAll", method = RequestMethod.POST)
+    public DeferredResult<Object> userSelectAll(HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            String key = "usa"+"#"+session.getId();
+            valueCenter.getSession_deferredResult_map().put(key,result);
+            sql.User_SelectAll(session.getId());
+        }
+        return result;
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
+    public DeferredResult<Object> userUpdate(@RequestBody(required = true) Map<String, Object> req_map, HttpSession session) {
+        DeferredResult<Object> result = new DeferredResult<>();
+        if (isLogin(result, session)) {
+            int res = sql.User_Update((String) req_map.get("name"), (String) req_map.get("password"), (int) req_map.get("type"),
+                    (String) req_map.get("pro_company"), (String) req_map.get("use_company"), (int) req_map.get("level"), (String) req_map.get("imei"));
+            Map<String, Object> map = new HashMap<>();
+            if (res > 0)
+                map.put("result", ErrorCode.SUCCESS);
+            else
+                map.put("result", ErrorCode.SQL_EXECUTE_ERROR);
+            result.setResult(map);
+        }
+        return result;
+    }
+
+
+
+
     private Boolean isLogin(DeferredResult<Object> result, HttpSession session) {
         if (valueCenter.getSession_userinfo().get(session.getId()) == null) {
             Map<String, Object> map = new HashMap<>();
@@ -235,7 +332,7 @@ public class SpringMvcController {
             result.setResult(map);
             return false;
         } else {
-            valueCenter.getSession_timeout().put(session.getId(),System.currentTimeMillis());
+            valueCenter.getSession_timeout().put(session.getId(), System.currentTimeMillis());
             return true;
         }
     }

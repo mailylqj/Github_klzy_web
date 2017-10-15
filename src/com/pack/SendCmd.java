@@ -46,10 +46,12 @@ public class SendCmd {
         //log.info("----------------------uuid--" + uuid);
     }
 
-    public void sendData(ByteBuffer byteBuffer, int type) {
-        client.send(byteBuffer);
-        if (type == 2 || type == 8 || type == 11 || type == 12) {
-            //ValueCenter.getInstance().dialogView_handler.sendEmptyMessage(4);
+    public void sendData(ByteBuffer byteBuffer, String key) {
+        if ((!client.send(byteBuffer)) && key != null) {
+            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
+            Map<String, Object> ret_map = new HashMap<>();
+            ret_map.put("result", ErrorCode.SEND_ERROR);
+            result.setResult(ret_map);
         }
     }
 
@@ -60,7 +62,7 @@ public class SendCmd {
         com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
         int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
         ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(req, (short) method_idx);
-        sendData(byteBuffer, 13);
+        sendData(byteBuffer, null);
     }
 
     public void unreg_server_lastestdata(IoSession session) {
@@ -81,7 +83,7 @@ public class SendCmd {
         com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
         int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
         ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(req, (short) method_idx);
-        sendData(byteBuffer, 14);
+        sendData(byteBuffer, null);
     }
 
     public void reg_server_online() {
@@ -91,7 +93,7 @@ public class SendCmd {
         com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
         int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
         ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(req, (short) method_idx);
-        sendData(byteBuffer, 15);
+        sendData(byteBuffer, null);
     }
 
     public void unreg_server_online() {
@@ -101,9 +103,8 @@ public class SendCmd {
         com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
         int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
         ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(req, (short) method_idx);
-        sendData(byteBuffer, 16);
+        sendData(byteBuffer, null);
     }
-
 
 
     public void control(String uid, String imei, int datatype, int datadecimals, int writeadd, float value, String key) {
@@ -118,13 +119,12 @@ public class SendCmd {
             com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
-            sendData(byteBuffer, 7);
+            sendData(byteBuffer, "control" + "#" + key);
         }
     }
 
 
     public void readModData(String uid, long Stime, long Etime, String key) {
-
         long[] time = Helper.getInstance().checkTime(Stime, Etime);
         List<Long> selecttime_list = new ArrayList<>();
         selecttime_list.add(time[0]);
@@ -132,7 +132,7 @@ public class SendCmd {
         selecttime_list.add((long) 0);
         selecttime_list.add((long) 0);
         selecttime_list = Helper.getInstance().calculatetime(selecttime_list, 1);
-        ModData(uid,selecttime_list,key);
+        ModData(uid, selecttime_list, key);
     }
 
     public void readModDataPrev(String key) {
@@ -148,7 +148,7 @@ public class SendCmd {
             }
 
             list = Helper.getInstance().calculatetime(list, 0);
-            ModData(uid,list,key);
+            ModData(uid, list, key);
         } else {
             DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
             Map<String, Object> ret_map = new HashMap<>();
@@ -170,7 +170,7 @@ public class SendCmd {
             }
 
             list = Helper.getInstance().calculatetime(list, 1);
-            ModData(uid,list,key);
+            ModData(uid, list, key);
         } else {
             DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
             Map<String, Object> ret_map = new HashMap<>();
@@ -195,7 +195,7 @@ public class SendCmd {
             com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
-            sendData(byteBuffer, 8);
+            sendData(byteBuffer, key);
             //log.error("历史数据发送：   " +System.currentTimeMillis());
         } else {
             DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
@@ -215,7 +215,7 @@ public class SendCmd {
             com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
-            sendData(byteBuffer, 11);
+            sendData(byteBuffer, "cdata" + "#" +key);
         }
     }
 
@@ -229,7 +229,7 @@ public class SendCmd {
             com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
-            sendData(byteBuffer, 12);
+            sendData(byteBuffer, "adata" + "#" +key);
         }
     }
 
