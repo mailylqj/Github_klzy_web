@@ -15,7 +15,7 @@ public class ShowCValueInfoBean {
     // 读写类型
     private int rwType;
     //  权限
-    private int permission;
+    private int level;
 
     //************** new Add
     //  显示类型  // 1  bit  2 int  3 progress 4 arcprogress 5 temp 6 rota 7 curve
@@ -29,12 +29,12 @@ public class ShowCValueInfoBean {
     //……………………………………………………
 
 
-    public ShowCValueInfoBean(String name, float value, String unit, int rwType, int permission, String showType, int max, int min, int writeadd) {
+    public ShowCValueInfoBean(String name, float value, String unit, int rwType, int level, String showType, int max, int min, int writeadd) {
         this.name = name;
         this.value = value;
         this.unit = unit;
         this.rwType = rwType;
-        this.permission = permission;
+        this.level = level;
         this.showType = showType;
         this.max = max;
         this.min = min;
@@ -73,12 +73,12 @@ public class ShowCValueInfoBean {
         this.rwType = rwType;
     }
 
-    public int getPermission() {
-        return permission;
+    public int getLevel() {
+        return level;
     }
 
-    public void setPermission(int permission) {
-        this.permission = permission;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public String getShowType() {

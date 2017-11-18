@@ -5,89 +5,35 @@ import com.sun.istack.internal.NotNull;
 import java.util.List;
 
 public class UserBean {
-    @NotNull
+    int id;
     String username;
-    @NotNull
     String password;
-
-    int type;
     String pro_company;
     String use_company;
+    String level_name;
+
+    int pro_company_id;
+    int use_company_id;
     int level;
-    String imei;
 
-
-
-    public UserBean(String username, String password) {
+    public UserBean(int id, String username, String password, String pro_company, String use_company, String level_name, int pro_company_id, int use_company_id, int level) {
+        this.id = id;
         this.username = username;
         this.password = password;
-    }
-
-    public UserBean(String username, String password, int type, String pro_company, String use_company, int level, String imei) {
-        this.username = username;
-        this.password = password;
-        this.type = type;
         this.pro_company = pro_company;
         this.use_company = use_company;
-        this.level = level;
-        this.imei = imei;
-    }
-
-    @Override
-    public String toString() {
-        return "UserBean{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", type=" + type +
-                ", pro_company='" + pro_company + '\'' +
-                ", use_company='" + use_company + '\'' +
-                ", level=" + level +
-                ", imei='" + imei + '\'' +
-                '}';
-    }
-
-    public UserBean() {
-    }
-
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
-    public String getPro_company() {
-        return pro_company;
-    }
-
-    public void setPro_company(String pro_company) {
-        this.pro_company = pro_company;
-    }
-
-    public String getUse_company() {
-        return use_company;
-    }
-
-    public void setUse_company(String use_company) {
-        this.use_company = use_company;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
+        this.level_name = level_name;
+        this.pro_company_id = pro_company_id;
+        this.use_company_id = use_company_id;
         this.level = level;
     }
 
-    public String getImei() {
-        return imei;
+    public int getId() {
+        return id;
     }
 
-    public void setImei(String imei) {
-        this.imei = imei;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -106,4 +52,51 @@ public class UserBean {
         this.password = password;
     }
 
+    public String getPro_company() {
+        return pro_company;
+    }
+
+    public void setPro_company(String pro_company) {
+        this.pro_company = pro_company;
+    }
+
+    public String getUse_company() {
+        return use_company;
+    }
+
+    public void setUse_company(String use_company) {
+        this.use_company = use_company;
+    }
+
+    public String getLevel_name() {
+        return level_name;
+    }
+
+    public void setLevel_name(String level_name) {
+        this.level_name = level_name;
+    }
+
+    public int getPro_company_id() {
+        return pro_company_id;
+    }
+
+    public void setPro_company_id(int pro_company_id) {
+        this.pro_company_id = pro_company_id;
+    }
+
+    public int getUse_company_id() {
+        return use_company_id;
+    }
+
+    public void setUse_company_id(int use_company_id) {
+        this.use_company_id = use_company_id;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }

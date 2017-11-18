@@ -1909,6 +1909,10 @@ public final class modbus_data {
     // optional string sessionid = 5;
     boolean hasSessionid();
     String getSessionid();
+    
+    // optional int32 totalpage = 6;
+    boolean hasTotalpage();
+    int getTotalpage();
   }
   public static final class read_data_response extends
       com.google.protobuf.GeneratedMessage
@@ -2023,12 +2027,23 @@ public final class modbus_data {
       }
     }
     
+    // optional int32 totalpage = 6;
+    public static final int TOTALPAGE_FIELD_NUMBER = 6;
+    private int totalpage_;
+    public boolean hasTotalpage() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    public int getTotalpage() {
+      return totalpage_;
+    }
+    
     private void initFields() {
       uid_ = com.google.protobuf.ByteString.EMPTY;
       modAddress_ = com.google.protobuf.ByteString.EMPTY;
       dataAddress_ = com.google.protobuf.ByteString.EMPTY;
       info_ = java.util.Collections.emptyList();
       sessionid_ = "";
+      totalpage_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2075,6 +2090,9 @@ public final class modbus_data {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(5, getSessionidBytes());
       }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(6, totalpage_);
+      }
       getUnknownFields().writeTo(output);
     }
     
@@ -2103,6 +2121,10 @@ public final class modbus_data {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getSessionidBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, totalpage_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2243,6 +2265,8 @@ public final class modbus_data {
         }
         sessionid_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        totalpage_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
       
@@ -2306,6 +2330,10 @@ public final class modbus_data {
           to_bitField0_ |= 0x00000008;
         }
         result.sessionid_ = sessionid_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.totalpage_ = totalpage_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2359,6 +2387,9 @@ public final class modbus_data {
         }
         if (other.hasSessionid()) {
           setSessionid(other.getSessionid());
+        }
+        if (other.hasTotalpage()) {
+          setTotalpage(other.getTotalpage());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2433,6 +2464,11 @@ public final class modbus_data {
             case 42: {
               bitField0_ |= 0x00000010;
               sessionid_ = input.readBytes();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              totalpage_ = input.readInt32();
               break;
             }
           }
@@ -2737,6 +2773,27 @@ public final class modbus_data {
         onChanged();
       }
       
+      // optional int32 totalpage = 6;
+      private int totalpage_ ;
+      public boolean hasTotalpage() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      public int getTotalpage() {
+        return totalpage_;
+      }
+      public Builder setTotalpage(int value) {
+        bitField0_ |= 0x00000020;
+        totalpage_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearTotalpage() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalpage_ = 0;
+        onChanged();
+        return this;
+      }
+      
       // @@protoc_insertion_point(builder_scope:com.ideal.logic.read_data_response)
     }
     
@@ -2789,11 +2846,12 @@ public final class modbus_data {
       "mod_address\030\002 \002(\014\022\024\n\014data_address\030\003 \002(\014\022" +
       "\022\n\nstart_time\030\004 \001(\004\022\020\n\010end_time\030\005 \001(\004\022\021\n" +
       "\tsessionid\030\006 \001(\t\"\'\n\tdata_info\022\014\n\004data\030\001 " +
-      "\002(\014\022\014\n\004time\030\002 \002(\004\"\211\001\n\022read_data_response" +
+      "\002(\014\022\014\n\004time\030\002 \002(\004\"\234\001\n\022read_data_response" +
       "\022\013\n\003uid\030\001 \002(\014\022\023\n\013mod_address\030\002 \002(\014\022\024\n\014da" +
       "ta_address\030\003 \002(\014\022(\n\004info\030\004 \003(\0132\032.com.ide",
-      "al.logic.data_info\022\021\n\tsessionid\030\005 \001(\tB$\n" +
-      "\017com.ideal.logicB\013modbus_data\200\001\001\210\001\001"
+      "al.logic.data_info\022\021\n\tsessionid\030\005 \001(\t\022\021\n" +
+      "\ttotalpage\030\006 \001(\005B$\n\017com.ideal.logicB\013mod" +
+      "bus_data\200\001\001\210\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -2837,7 +2895,7 @@ public final class modbus_data {
           internal_static_com_ideal_logic_read_data_response_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_ideal_logic_read_data_response_descriptor,
-              new String[] { "Uid", "ModAddress", "DataAddress", "Info", "Sessionid", },
+              new String[] { "Uid", "ModAddress", "DataAddress", "Info", "Sessionid", "Totalpage", },
               read_data_response.class,
               read_data_response.Builder.class);
           return null;

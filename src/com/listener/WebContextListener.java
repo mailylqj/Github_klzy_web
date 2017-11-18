@@ -10,8 +10,10 @@ import javax.servlet.ServletContextListener;
 public class WebContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
+
         BalanceMinaClient.getInstance().start();
         JDBC_Pool.getInstance();
+
     }
 
     @Override

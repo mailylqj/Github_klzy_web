@@ -29,31 +29,32 @@ public class ValueCenter {
     Map<String, CurData> all_ExData = new ConcurrentHashMap<>();
 
     //异步返回     （通过session 来删除）
-    Map<String, Object> session_deferredResult_map = new ConcurrentHashMap<String, Object>();
+    Map<String, Object> uuid_deferredResult = new ConcurrentHashMap<String, Object>();
 
     //用户信息  已处理
-    Map<String, UserBean> session_userinfo = new ConcurrentHashMap<>();
-
-    //设备列表  已处理
-    Map<String, Map<String, DeviceBean>> session_device = new ConcurrentHashMap<>();
+    Map<String, UserBean> uuid_userinfo = new ConcurrentHashMap<>();
 
     //查询时间  已处理
-    Map<String, Map<String, List<Long>>> session_selecttime = new ConcurrentHashMap<>();
-
-    //websocket session   已处理
-    Map<String, WebSocketSession> ss_map = new ConcurrentHashMap<>();
+    Map<String,SelectInfoBean> session_selecttime = new ConcurrentHashMap<>();
 
     //websocket choseDevice  已处理
-    Map<WebSocketSession, List<String>> websoket_map = new ConcurrentHashMap<>();
+    Map<WebSocketSession, String> websocket_map = new ConcurrentHashMap<>();
 
-    //session 超时
-    Map<String, Long> session_timeout = new ConcurrentHashMap<>();
+    // token_map
+    Map<String, Boolean> token_map = new ConcurrentHashMap<>();
+
+    // 定时清理
+    Map<String,Long>  time_map  = new ConcurrentHashMap<>();
 
     // config list
-    Map<String, List<ValueInfoBean>> config_map = new ConcurrentHashMap<>();
+    Map<String, List<ValueInfoBean>> uuid_config = new ConcurrentHashMap<>();
 
+    // 保存的  通过用户读取的设备
+    Map<String,List<Integer>> uuid_user_device_chose = new ConcurrentHashMap<>();
 
-    private int RegOnlien = 0;
+    // 保存的  通过设备关联用户
+    Map<String,List<Integer>> uuid_device_imei = new ConcurrentHashMap<>();
+
     private int RegLastestData = 0;
 
     /******************************** 清理相关数据 **************************************/
@@ -85,77 +86,75 @@ public class ValueCenter {
             if (!all_OnlineDevice.contains(key))
                 all_LastestData.remove(key);
         }
-        //session
-        Iterator<Map.Entry<String, Long>> entries03 = session_timeout.entrySet().iterator();
+        //uuid
+        Iterator<Map.Entry<String, Long>> entries03 = time_map.entrySet().iterator();
         long curtime = System.currentTimeMillis();
         while (entries03.hasNext()) {
             Map.Entry<String, Long> entry = entries03.next();
             String key = entry.getKey();
             long value = entry.getValue();
             if ((curtime-value)>=1000*60*30){
-                session_userinfo.remove(key);
-                session_selecttime.remove("mdata" + "#" +key);
-
-                //websocket 处理
-                WebSocketSession  webSocketSession =  ss_map.get(key);
-                websoket_map.remove(webSocketSession);
-                ss_map.remove(key);
-                session_timeout.remove(key);
-
-                //异步
-                session_deferredResult_map.remove( "login" + "#" +key);
-                session_deferredResult_map.remove( "dlist" + "#" +key);
-                session_deferredResult_map.remove( "config" + "#" +key);
-                session_deferredResult_map.remove( "control" + "#" +key);
-                session_deferredResult_map.remove( "mdata" + "#" +key);
-                session_deferredResult_map.remove( "cdata" + "#" +key);
-                session_deferredResult_map.remove( "adata" + "#" +key);
+                uuid_userinfo.remove(key);
+                session_selecttime.remove(key);
+                uuid_deferredResult.remove(key);
+                uuid_config.remove(key);
+                uuid_device_imei.remove(key);
+                uuid_user_device_chose.remove(key);
+                time_map.remove(key);
             }
         }
     }
 
 
+
+
     /****************************** get set 方法 ************************************/
 
-    public Map<String, List<ValueInfoBean>> getConfig_map() {
-        return config_map;
+
+    public Map<WebSocketSession, String> getWebsocket_map() {
+        return websocket_map;
     }
 
-    public void setConfig_map(Map<String, List<ValueInfoBean>> config_map) {
-        this.config_map = config_map;
+    public void setWebsocket_map(Map<WebSocketSession, String> websocket_map) {
+        this.websocket_map = websocket_map;
     }
 
-    public Map<String, WebSocketSession> getSs_map() {
-        return ss_map;
+    public Map<String, List<Integer>> getUuid_user_device_chose() {
+        return uuid_user_device_chose;
     }
 
-    public void setSs_map(Map<String, WebSocketSession> ss_map) {
-        this.ss_map = ss_map;
+    public void setUuid_user_device_chose(Map<String, List<Integer>> uuid_user_device_chose) {
+        this.uuid_user_device_chose = uuid_user_device_chose;
     }
 
-    public Map<WebSocketSession, List<String>> getWebsoket_map() {
-        return websoket_map;
+    public Map<String, List<Integer>> getUuid_device_imei() {
+        return uuid_device_imei;
     }
 
-    public void setWebsoket_map(Map<WebSocketSession, List<String>> websoket_map) {
-        this.websoket_map = websoket_map;
+    public void setUuid_device_imei(Map<String, List<Integer>> uuid_device_imei) {
+        this.uuid_device_imei = uuid_device_imei;
     }
 
-
-    public Map<String, Map<String, List<Long>>> getSession_selecttime() {
+    public Map<String, SelectInfoBean> getUuid_selecttime() {
         return session_selecttime;
     }
 
-    public void setSession_selecttime(Map<String, Map<String, List<Long>>> session_selecttime) {
+    public void setSession_selecttime(Map<String, SelectInfoBean> session_selecttime) {
         this.session_selecttime = session_selecttime;
     }
 
-    public Map<String, Long> getSession_timeout() {
-        return session_timeout;
+    public Map<String, List<ValueInfoBean>> getUuid_config() {
+        return uuid_config;
     }
 
-    public void setSession_timeout(Map<String, Long> session_timeout) {
-        this.session_timeout = session_timeout;
+    public void setUuid_config(Map<String, List<ValueInfoBean>> uuid_config) {
+        this.uuid_config = uuid_config;
+    }
+
+    public Map<String, Boolean> getToken_map() {     return token_map;    }
+
+    public void setToken_map(Map<String, Boolean> token_map) {
+        this.token_map = token_map;
     }
 
     public Map<String, CurData> getAll_ExData() {
@@ -166,13 +165,6 @@ public class ValueCenter {
         this.all_ExData = all_ExData;
     }
 
-    public int getRegOnlien() {
-        return RegOnlien;
-    }
-
-    public void setRegOnlien(int regOnlien) {
-        RegOnlien = regOnlien;
-    }
 
     public int getRegLastestData() {
         return RegLastestData;
@@ -182,28 +174,29 @@ public class ValueCenter {
         RegLastestData = regLastestData;
     }
 
-    public Map<String, Map<String, DeviceBean>> getSession_device() {
-        return session_device;
+//    public Map<String, Map<String, DeviceBean>> getSession_device() {
+//        return session_device;
+//    }
+//
+//    public void setSession_device(Map<String, Map<String, DeviceBean>> session_device) {
+//        this.session_device = session_device;
+//    }
+
+
+    public Map<String, UserBean> getUuid_userinfo() {
+        return uuid_userinfo;
     }
 
-    public void setSession_device(Map<String, Map<String, DeviceBean>> session_device) {
-        this.session_device = session_device;
+    public void setUuid_userinfo(Map<String, UserBean> uuid_userinfo) {
+        this.uuid_userinfo = uuid_userinfo;
     }
 
-    public Map<String, UserBean> getSession_userinfo() {
-        return session_userinfo;
+    public Map<String, Object> getUuid_deferredResult() {
+        return uuid_deferredResult;
     }
 
-    public void setSession_userinfo(Map<String, UserBean> session_userinfo) {
-        this.session_userinfo = session_userinfo;
-    }
-
-    public Map<String, Object> getSession_deferredResult_map() {
-        return session_deferredResult_map;
-    }
-
-    public void setSession_deferredResult_map(Map<String, Object> session_deferredResult_map) {
-        this.session_deferredResult_map = session_deferredResult_map;
+    public void setUuid_deferredResult(Map<String, Object> uuid_deferredResult) {
+        this.uuid_deferredResult = uuid_deferredResult;
     }
 
     public List<String> getAll_OnlineDevice() {
@@ -223,5 +216,13 @@ public class ValueCenter {
     public void setAll_LastestData(Map<String, ModbusRecordData> all_LastestData) {
         this.all_LastestData.clear();
         this.all_LastestData.putAll(all_LastestData);
+    }
+
+    public Map<String, Long> getTime_map() {
+        return time_map;
+    }
+
+    public void setTime_map(Map<String, Long> time_map) {
+        this.time_map = time_map;
     }
 }

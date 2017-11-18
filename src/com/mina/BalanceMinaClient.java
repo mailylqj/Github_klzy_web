@@ -3,6 +3,8 @@ package com.mina;
 import com.util.const_value;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.future.ConnectFuture;
+import org.apache.mina.core.future.IoFuture;
+import org.apache.mina.core.future.IoFutureListener;
 import org.apache.mina.core.service.IoConnector;
 import org.apache.mina.core.service.IoServiceListener;
 import org.apache.mina.core.session.IoSession;
@@ -50,8 +52,8 @@ public class BalanceMinaClient {
 			ConnectFuture connFuture = connector.connect(new InetSocketAddress(host, port));
 			connFuture.awaitUninterruptibly();
 			IoSession session = connFuture.getSession();
-			//balanceHandler.sessionOpened(session);		
-			//System.out.println("balance---创建--" );
+			balanceHandler.sessionOpened(session);
+
 			return session;
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -7,7 +7,9 @@ import com.pack.SendCmd;
 import org.apache.log4j.Logger;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
-import org.apache.mina.core.future.ConnectFuture;
+import org.apache.mina.core.filterchain.IoFilter;
+import org.apache.mina.core.filterchain.IoFilterAdapter;
+import org.apache.mina.core.future.*;
 import org.apache.mina.core.service.IoConnector;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -48,11 +50,7 @@ public class RealMinaClient {
         this.port = port;
 
         for (int i=0;i<5;i++){
-            IoSession session = creat_Connection();
-            if (session != null) {
-                sessions_deque.offerLast(session);
-                log.info("real---创建--");
-            }
+           creat_Connection();
         }
     }
 
@@ -75,6 +73,22 @@ public class RealMinaClient {
         connector.setHandler(clientHandler);
         DefaultIoFilterChainBuilder chain = connector.getFilterChain();
         chain.addLast("codec", new ProtocolCodecFilter(new RPCPackageEncoder(), new RPCPackageDecoder()));
+
+//        connector.addListener(new IoListener(){
+//            @Override        chain.addFirst("reconnection",new IoFilterAdapter(){
+//            @Override
+//            public void sessionClosed(NextFilter nextFilter, IoSession session) throws Exception {
+//                RealMinaClient.getInstance().getSessions_deque().removeFirstOccurrence(session);
+//                if (RealMinaClient.getInstance().getSessions_deque().size() ==0)
+//                    BalanceMinaClient.getInstance().start();
+//                super.sessionClosed(nextFilter, session);
+//            }
+//        });
+//            public void sessionDestroyed(IoSession ioSession) throws Exception {
+//                System.out.println("real——客户端会话关闭3");
+//                super.sessionDestroyed(ioSession);
+//            }
+//        });
     }
 
     /**
@@ -82,23 +96,31 @@ public class RealMinaClient {
      *
      * @return
      */
-    private IoSession creat_Connection() {
+
+    private void creat_Connection() {
         try {
-            if (host!= null && port != 0) {
+            if (host != null && port != 0) {
                 ConnectFuture connFuture = connector.connect(new InetSocketAddress(host, port));
-                connFuture.awaitUninterruptibly();
-                IoSession session = connFuture.getSession();
-                SocketSessionConfig config = (SocketSessionConfig) connector.getSessionConfig();
-                config.setReadBufferSize(100 * 1024);
-                config.setIdleTime(IdleStatus.BOTH_IDLE, 300);
-                //clientHandler.sessionOpened(session);
-                return session;
-            }else
-                return null;
+
+                connFuture.addListener(new IoFutureListener<IoFuture>() {
+                    @Override
+                    public void operationComplete(IoFuture ioFuture) {
+                        IoSession session = connFuture.getSession();
+                        SocketSessionConfig config = (SocketSessionConfig) connector.getSessionConfig();
+                        config.setReadBufferSize(100 * 1024);
+                        config.setIdleTime(IdleStatus.BOTH_IDLE, 15);
+                        try {
+                            clientHandler.sessionOpened(session);
+                            sessions_deque.offerLast(session);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     /**
@@ -112,6 +134,7 @@ public class RealMinaClient {
         IoSession session = sessions_deque.pollFirst();
 
         if (session != null) {
+            Boolean  ac = session.isActive();
             session.write(buffer);
             return true;
         }else{

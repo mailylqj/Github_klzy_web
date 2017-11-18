@@ -7,62 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd8f0c40-1fcc-4c57-89d6-f2bc2f090f27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="D:\works\nodeserver\Github_klzy_web\out\artifacts\web_Web_exploded\WEB-INF\applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\works\nodeserver\Github_klzy_web\out\artifacts\web_Web_exploded\WEB-INF\classes\com\bean\ConfigFileBean.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\works\nodeserver\Github_klzy_web\out\artifacts\web_Web_exploded\WEB-INF\classes\com\bean\ExModbusData.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\works\nodeserver\Github_klzy_web\out\artifacts\web_Web_exploded\WEB-INF\dispatcher-servlet.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/BalanceHandler.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/BalanceHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mina/BalanceHandler.class" afterPath="$PROJECT_DIR$/out/production/web/com/mina/BalanceHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/util/ErrorCode.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/util/ErrorCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/util/ErrorCode.class" afterPath="$PROJECT_DIR$/out/production/web/com/util/ErrorCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mysql/JDBC_Pool.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mysql/JDBC_Pool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mysql/JDBC_Pool.class" afterPath="$PROJECT_DIR$/out/production/web/com/mysql/JDBC_Pool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealHandler.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mina/RealHandler.class" afterPath="$PROJECT_DIR$/out/production/web/com/mina/RealHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealMinaClient$regWeb_Thread.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealMinaClient$regWeb_Thread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mina/RealMinaClient$regWeb_Thread.class" afterPath="$PROJECT_DIR$/out/production/web/com/mina/RealMinaClient$regWeb_Thread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealMinaClient.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mina/RealMinaClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mina/RealMinaClient.class" afterPath="$PROJECT_DIR$/out/production/web/com/mina/RealMinaClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/pack/ReceiveCmd.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/pack/ReceiveCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/pack/ReceiveCmd.class" afterPath="$PROJECT_DIR$/out/production/web/com/pack/ReceiveCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/pack/SendCmd.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/pack/SendCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/pack/SendCmd.class" afterPath="$PROJECT_DIR$/out/production/web/com/pack/SendCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/springmvc/SpringMvcController.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/springmvc/SpringMvcController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/springmvc/SpringMvcController.class" afterPath="$PROJECT_DIR$/out/production/web/com/springmvc/SpringMvcController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mysql/SqlCmd.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/mysql/SqlCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/mysql/SqlCmd.class" afterPath="$PROJECT_DIR$/out/production/web/com/mysql/SqlCmd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/application/ValueCenter$1.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/application/ValueCenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/application/ValueCenter$1.class" afterPath="$PROJECT_DIR$/out/production/web/com/application/ValueCenter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/application/ValueCenter.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/application/ValueCenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/application/ValueCenter.class" afterPath="$PROJECT_DIR$/out/production/web/com/application/ValueCenter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/bean/ValueInfoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/bean/ValueInfoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/bean/ValueInfoBean.class" afterPath="$PROJECT_DIR$/out/production/web/com/bean/ValueInfoBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/listener/WebContextListener.class" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/com/listener/WebContextListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/com/listener/WebContextListener.class" afterPath="$PROJECT_DIR$/out/production/web/com/listener/WebContextListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/.gitattributes" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/.gitattributes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mina/BalanceHandler.java" afterPath="$PROJECT_DIR$/src/com/mina/BalanceHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/util/ErrorCode.java" afterPath="$PROJECT_DIR$/src/com/util/ErrorCode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java" afterPath="$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/README.md" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mina/RealHandler.java" afterPath="$PROJECT_DIR$/src/com/mina/RealHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mina/RealMinaClient.java" afterPath="$PROJECT_DIR$/src/com/mina/RealMinaClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pack/ReceiveCmd.java" afterPath="$PROJECT_DIR$/src/com/pack/ReceiveCmd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/pack/SendCmd.java" afterPath="$PROJECT_DIR$/src/com/pack/SendCmd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java" afterPath="$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mysql/SqlCmd.java" afterPath="$PROJECT_DIR$/src/com/mysql/SqlCmd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/application/ValueCenter.java" afterPath="$PROJECT_DIR$/src/com/application/ValueCenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bean/ValueInfoBean.java" afterPath="$PROJECT_DIR$/src/com/bean/ValueInfoBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/listener/WebContextListener.java" afterPath="$PROJECT_DIR$/src/com/listener/WebContextListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/out/artifacts/web_Web_exploded/WEB-INF/classes/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/web/jdbc.properties" afterPath="$PROJECT_DIR$/out/production/web/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jdbc.properties" afterPath="$PROJECT_DIR$/src/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web" afterPath="$PROJECT_DIR$/web" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -75,7 +20,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Github_klzy_web$tomcat.coverage" NAME="tomcat Coverage Results" MODIFIED="1508048516606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -97,21 +45,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="const_value.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/util/const_value.java">
+      <file leaf-file-name="ValueInfoBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bean/ValueInfoBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBC_Pool.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java">
+      <file leaf-file-name="WebSocketHander.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.307517">
-              <caret line="548" column="35" selection-start-line="548" selection-start-column="35" selection-end-line="548" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/util/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="596" column="33" selection-start-line="596" selection-start-column="33" selection-end-line="596" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringMvcController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="603" column="22" selection-start-line="603" selection-start-column="22" selection-end-line="603" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlCmd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="685" column="9" selection-start-line="685" selection-start-column="9" selection-end-line="685" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NormalDeviceSelect.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/bean/NormalDeviceSelect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52380955">
+              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bean/CurData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendCmd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/pack/SendCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceiveCmd.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/pack/ReceiveCmd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -124,17 +154,42 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>System.out.println</find>
-      <find>Map&lt;String, Object&gt;</find>
-      <find>&lt;Map&lt;String, Object&gt;&gt;</find>
-      <find>url02</find>
-      <find>, IoSession iosession</find>
-      <find>sessionClose(iosession);</find>
+      <find>UserBean userBean = checkToken(result, session);if (userBean != null) {</find>
+      <find>result</find>
+      <find>, HttpSession session</find>
+      <find>session.getId()</find>
+      <find>null,null);</find>
+      <find>&gt; 0</find>
+      <find>sync</find>
+      <find>synchronized</find>
+      <find>请求id</find>
+      <find>new DeferredResult&lt;&gt;()</find>
+      <find>checkToken(result, token)</find>
+      <find>String token = (String) req_map.get(&quot;Token&quot;);</find>
+      <find>if (uuid != null) {</find>
+      <find>(long) 30000);</find>
+      <find>(uuid,</find>
+      <find>(String uuid</find>
+      <find>gettoken</find>
+      <find>uuid</find>
+      <find>String) req_map.get(&quot;Token&quot;)</find>
+      <find>&quot;000011112222&quot;</find>
+      <find>Token token = checkToken(result, (String) req_map.get(&quot;token&quot;), null);</find>
+      <find>return result;</find>
+      <find>.get(token);</find>
+      <find>userlevel &gt; level</find>
+      <find>数据更新条数</find>
+      <find>insert</find>
+      <find>Integer.getInteger(</find>
+      <find>valueCenter.getUuid_userinfo().get(token.getUuid());</find>
+      <find>String use_company = (String) req_map.get(&quot;use_company&quot;);</find>
+      <find>imei</find>
     </findStrings>
     <replaceStrings>
       <replace>log.info</replace>
@@ -142,6 +197,28 @@
       <replace>&lt;Object&gt;</replace>
       <replace>url_01</replace>
       <replace>url_02</replace>
+      <replace>yyyy</replace>
+      <replace>uuid</replace>
+      <replace>uuid,null);</replace>
+      <replace>new DeferredResult&lt;Object&gt;(30000)</replace>
+      <replace>new DeferredResult&lt;Object&gt;((long)30000)</replace>
+      <replace>checkToken(result, token,null)</replace>
+      <replace>return result;</replace>
+      <replace>(long) 20000);</replace>
+      <replace>(token.getUuid,</replace>
+      <replace>(token,</replace>
+      <replace>(Token token</replace>
+      <replace>getUuid</replace>
+      <replace>token</replace>
+      <replace>String) req_map.get(&quot;token&quot;)</replace>
+      <replace>&quot;eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxM2UyYmQ1NWIxYTk0NjMzYWRjMjAzNDlkZGVjZWI5ZSIsImF1ZCI6IjE1MDk5MzU1Mzk3ODcifQ.MQbuzqiwZWkxJBA1U1NkdgpCLIWedjWgN5k5IlVxWew&quot;</replace>
+      <replace>}return result;</replace>
+      <replace>.get(token.getUuid());</replace>
+      <replace>userlevel &gt;= level</replace>
+      <replace>ChangeNum</replace>
+      <replace>Integer.valueOf(</replace>
+      <replace>getUserInfo(result,token);</replace>
+      <replace>int use_company_id = (int) req_map.get(&quot;use_company_id&quot;);</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -156,57 +233,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/websock/WebSocketHander.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/filterchain/DefaultIoFilterChain.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/filter/codec/ProtocolCodecFilter.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/filterchain/IoFilterAdapter.class" />
-        <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketConfig.java" />
-        <option value="$PROJECT_DIR$/src/com/pack/RPCPackageDecoder.java" />
-        <option value="$PROJECT_DIR$/src/school-mybatis.xml.fxml" />
-        <option value="$PROJECT_DIR$/src/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/school-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/com/bean/HisContorlDataBean.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/HisAlarmDataBean.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/HisAlarmDataBean_mid.java" />
-        <option value="$PROJECT_DIR$/src/com/util/DataSort.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/server/support/HandshakeInterceptorChain.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/HttpRequestHandlerAdapter.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/handler/ExceptionWebSocketHandlerDecorator.class" />
-        <option value="$PROJECT_DIR$/src/com/bean/ConfigFileBean.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/ValueBean.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/ExModbusData.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/ShowValueInfoBean.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/ShowMValueInfoBean.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/handler/WebSocketHandlerDecorator.class" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/handler/LoggingWebSocketHandlerDecorator.class" />
+        <option value="$PROJECT_DIR$/src/com/ideal/logic/modbus_data.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/respons/RetModbusData.java" />
         <option value="$PROJECT_DIR$/src/com/bean/ModbusData.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/CurData.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/outTimeBean.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/context/request/async/DeferredResult.class" />
+        <option value="$PROJECT_DIR$/src/com/bean/DeviceBean.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class" />
+        <option value="$PROJECT_DIR$/src/com/pack/RPCPackageDecoder.java" />
+        <option value="$PROJECT_DIR$/src/com/util/ByteServer.java" />
         <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander01.java" />
-        <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander02.java" />
-        <option value="$PROJECT_DIR$/src/com/util/Helper.java" />
-        <option value="$PROJECT_DIR$/src/com/bean/ShowCValueInfoBean.java" />
-        <option value="D:/Kinco/Kinco HMIware v2.4/customized_driver/Customized Ethernet protocol！/COMx.c" />
+        <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/server/support/HandshakeInterceptorChain.class" />
         <option value="$PROJECT_DIR$/src/com/springmvc/websock/HandshakeInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/com/pack/ReceiveCmd.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/WebSocketID.java" />
+        <option value="D:/Kinco/Kinco HMIware v2.4/customized_driver/Customized Ethernet protocol！/COMx.c" />
+        <option value="$PROJECT_DIR$/src/com/util/JwtUtil.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class" />
+        <option value="$PROJECT_DIR$/src/com/mina/read.java" />
+        <option value="$PROJECT_DIR$/src/com/mina/IoListener.java" />
+        <option value="$PROJECT_DIR$/src/com/mina/BalanceMinaClient.java" />
+        <option value="$PROJECT_DIR$/src/com/mina/RealMinaClient.java" />
         <option value="$PROJECT_DIR$/src/com/mina/RealHandler.java" />
         <option value="$PROJECT_DIR$/src/com/mina/BalanceHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/Token.java" />
+        <option value="$PROJECT_DIR$/src/com/springmvc/SpringMvcTimeOut.java" />
+        <option value="$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander.java" />
         <option value="$PROJECT_DIR$/src/com/pack/SendCmd.java" />
-        <option value="$PROJECT_DIR$/src/com/mina/RealMinaClient.java" />
-        <option value="$PROJECT_DIR$/src/com/listener/WebContextListener.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class" />
-        <option value="$PROJECT_DIR$/src/com/bean/ValueInfoBean.java" />
-        <option value="$PROJECT_DIR$/src/com/application/ValueCenter.java" />
-        <option value="$PROJECT_DIR$/src/com/util/ErrorCode.java" />
-        <option value="$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java" />
-        <option value="$PROJECT_DIR$/src/com/mysql/SqlCmd.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/com/bean/SelectInfoBean.java" />
+        <option value="$PROJECT_DIR$/src/com/pack/ReceiveCmd.java" />
+        <option value="C:/web/website/index.html" />
         <option value="$PROJECT_DIR$/src/com/util/const_value.java" />
         <option value="$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/ShowUserBean.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/ProCompanyBean.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/UseCompanyBean.java" />
+        <option value="$PROJECT_DIR$/src/com/util/ErrorCode.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/ConfigBean.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/Imei.java" />
+        <option value="$PROJECT_DIR$/src/com/application/ValueCenter.java" />
+        <option value="$PROJECT_DIR$/src/com/listener/WebContextListener.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/ShowMValueInfoBean.java" />
+        <option value="$PROJECT_DIR$/src/com/util/Helper.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/ShowCValueInfoBean.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java" />
+        <option value="$PROJECT_DIR$/src/com/mysql/SqlCmd.java" />
+        <option value="$PROJECT_DIR$/src/com/bean/NormalDeviceSelect.java" />
       </list>
     </option>
   </component>
@@ -398,8 +475,10 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -410,7 +489,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -421,11 +500,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Github_klzy_web_1015/Github_klzy_web" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="172" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="201" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="202" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="876" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="198" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="196" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="198" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="872" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -433,11 +527,11 @@
       <recent name="com.springmvc.websock" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\GitHub\Github_klzy_web\src" />
       <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\GitHub\Github_klzy_web\web\WEB-INF\lib" />
+      <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\GitHub\Github_klzy_web\src\com\ideal\logic" />
+      <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\GitHub\Github_klzy_web\src" />
       <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\web\web\WEB-INF\lib" />
       <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\web\src" />
-      <recent name="D:\00_zhiyuan_cloud\01_cloud_server\12_WEB_2.0\web\src\com\ideal\logic" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -914,13 +1008,72 @@
       <workItem from="1507770341184" duration="26496000" />
       <workItem from="1507856573284" duration="10884000" />
       <workItem from="1507872928870" duration="7862000" />
-      <workItem from="1507978468048" duration="660000" />
-      <workItem from="1507980209694" duration="661000" />
+      <workItem from="1507978468048" duration="1246000" />
+      <workItem from="1507979777648" duration="14615000" />
+      <workItem from="1508046069503" duration="2446000" />
+      <workItem from="1508048742859" duration="5236000" />
+      <workItem from="1508115071583" duration="20956000" />
+      <workItem from="1508157329821" duration="1008000" />
+      <workItem from="1508202282316" duration="25375000" />
+      <workItem from="1508287393011" duration="53123000" />
+      <workItem from="1508460562881" duration="25209000" />
+      <workItem from="1508509314096" duration="5449000" />
+      <workItem from="1508720361510" duration="2508000" />
+      <workItem from="1508762040669" duration="29980000" />
+      <workItem from="1508852968018" duration="5608000" />
+      <workItem from="1508893647084" duration="11066000" />
+      <workItem from="1508909071304" duration="11664000" />
+      <workItem from="1508981890475" duration="1130000" />
+      <workItem from="1509004418327" duration="8268000" />
+      <workItem from="1509065063724" duration="13945000" />
+      <workItem from="1509104285728" duration="2618000" />
+      <workItem from="1509176532035" duration="4245000" />
+      <workItem from="1509327236548" duration="11754000" />
+      <workItem from="1509347732986" duration="6669000" />
+      <workItem from="1509411832420" duration="10324000" />
+      <workItem from="1509496233452" duration="11296000" />
+      <workItem from="1509585876492" duration="12759000" />
+      <workItem from="1509606426774" duration="10438000" />
+      <workItem from="1509669496339" duration="29921000" />
+      <workItem from="1509872472551" duration="32647000" />
+      <workItem from="1510127322472" duration="1968000" />
+      <workItem from="1510220724086" duration="158000" />
+      <workItem from="1510221265925" duration="4104000" />
+      <workItem from="1510227151092" duration="2128000" />
+      <workItem from="1510229858362" duration="8427000" />
+      <workItem from="1510276558507" duration="9781000" />
+      <workItem from="1510298330548" duration="8408000" />
+      <workItem from="1510361527369" duration="632000" />
+      <workItem from="1510373817005" duration="4998000" />
+      <workItem from="1510410495243" duration="2232000" />
+      <workItem from="1510466001778" duration="1820000" />
+      <workItem from="1510534369880" duration="1729000" />
+      <workItem from="1510537015209" duration="26427000" />
+      <workItem from="1510622634703" duration="8547000" />
+      <workItem from="1510637329133" duration="15145000" />
+      <workItem from="1510652735404" duration="1625000" />
+      <workItem from="1510667088164" duration="1553000" />
+      <workItem from="1510669117865" duration="1392000" />
+      <workItem from="1510670556132" duration="35000" />
+      <workItem from="1510991850752" duration="998000" />
     </task>
+    <task id="LOCAL-00001" summary="fsesdafsdf">
+      <created>1510993142246</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1510993142246</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fsesdafsdf">
+      <created>1510993301584</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510993301584</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266537000" />
+    <option name="totallyTimeSpent" value="738826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,32 +1091,33 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43150684" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.49394855" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38471672" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30650684" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33992094" sideWeight="0.48184568" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36130136" sideWeight="0.5181543" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2624811" sideWeight="0.5181818" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41095892" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34075344" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40974966" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23458904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2624811" sideWeight="0.5181818" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270548" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2141901" sideWeight="0.48181817" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51778656" sideWeight="0.7518911" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2248996" sideWeight="0.48181817" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6335617" sideWeight="0.7518911" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43150684" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.4969743" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2927383" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24486302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41952056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -972,23 +1126,63 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fsesdafsdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="fsesdafsdf" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java</url>
+          <line>729</line>
+          <properties />
+          <option name="timeStamp" value="317" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java</url>
+          <line>435</line>
+          <properties />
+          <option name="timeStamp" value="320" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java</url>
+          <line>396</line>
+          <properties />
+          <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java</url>
+          <line>451</line>
+          <properties />
+          <option name="timeStamp" value="323" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java</url>
+          <line>585</line>
+          <properties />
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java</url>
+          <line>1266</line>
+          <properties />
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java</url>
+          <line>1211</line>
+          <properties />
+          <option name="timeStamp" value="328" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="118" />
+      <option name="time" value="339" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -997,15 +1191,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/util/const_value.java">
+    <entry file="file://$PROJECT_DIR$/src/com/util/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="577" column="33" selection-start-line="577" selection-start-column="33" selection-end-line="577" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="617" column="22" selection-start-line="617" selection-start-column="22" selection-end-line="617" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="917" column="9" selection-start-line="917" selection-start-column="9" selection-end-line="917" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/NormalDeviceSelect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1013,95 +1233,273 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/HisAlarmDataBean_mid.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/CurData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/DataSort.java">
+    <entry file="file://$PROJECT_DIR$/src/com/pack/SendCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/HttpRequestHandlerAdapter.class">
+    <entry file="file://$PROJECT_DIR$/src/com/pack/ReceiveCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.class">
+    <entry file="file://$PROJECT_DIR$/src/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="407" column="0" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+    <entry file="file://$PROJECT_DIR$/src/springmvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="411" column="0" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/server/support/HandshakeInterceptorChain.class">
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/AsyncService.java">
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/future/ReadFuture.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/future/DefaultReadFuture.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/WebSocketConfig.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-websocket-4.3.10.RELEASE.jar!/org/springframework/web/socket/handler/ExceptionWebSocketHandlerDecorator.class">
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/future/DefaultIoFuture.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="276" column="60" selection-start-line="276" selection-start-column="60" selection-end-line="276" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/protobuf-java-2.4.1.jar!/com/google/protobuf/ByteString.class">
+    <entry file="file://$PROJECT_DIR$/src/com/mina/BalanceMinaClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mina/RealMinaClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mina/RealHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mina/BalanceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/context/request/async/DeferredResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/springmvc/SpringMvcTimeOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="58" selection-start-line="126" selection-start-column="58" selection-end-line="126" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/filterchain/DefaultIoFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="822" column="0" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/SelectInfoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bean/DeviceBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/ShowMValueInfoBean.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/UserBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#830#831#0" expanded="false" />
+            <element signature="e#855#856#0" expanded="false" />
+            <element signature="e#888#889#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1070#1071#0" expanded="false" />
+            <element signature="e#1105#1106#0" expanded="false" />
+            <element signature="e#1136#1137#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+            <element signature="e#1224#1225#0" expanded="false" />
+            <element signature="e#1262#1263#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1350#1351#0" expanded="false" />
+            <element signature="e#1396#1397#0" expanded="false" />
+            <element signature="e#1434#1435#0" expanded="false" />
+            <element signature="e#1468#1469#0" expanded="false" />
+            <element signature="e#1522#1523#0" expanded="false" />
+            <element signature="e#1568#1569#0" expanded="false" />
+            <element signature="e#1605#1606#0" expanded="false" />
+            <element signature="e#1638#1639#0" expanded="false" />
+            <element signature="e#1690#1691#0" expanded="false" />
+            <element signature="e#1734#1735#0" expanded="false" />
+            <element signature="e#1772#1773#0" expanded="false" />
+            <element signature="e#1809#1810#0" expanded="false" />
+            <element signature="e#1866#1867#0" expanded="false" />
+            <element signature="e#1918#1919#0" expanded="false" />
+            <element signature="e#1956#1957#0" expanded="false" />
+            <element signature="e#1993#1994#0" expanded="false" />
+            <element signature="e#2050#2051#0" expanded="false" />
+            <element signature="e#2102#2103#0" expanded="false" />
+            <element signature="e#2131#2132#0" expanded="false" />
+            <element signature="e#2159#2160#0" expanded="false" />
+            <element signature="e#2198#2199#0" expanded="false" />
+            <element signature="e#2232#2233#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/ProCompanyBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/util/const_value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/ConfigBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/application/ValueCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="428" column="15" selection-start-line="428" selection-start-column="15" selection-end-line="428" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/listener/WebContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/util/ErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/CurValueDataBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/ValueInfoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,211 +1510,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/CurData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/pack/SendCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bean/ModbusData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander02.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/RetModbusData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/ShowCValueInfoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes" />
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/buffer/IoBuffer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/HandshakeInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mina/BalanceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/pack/SendCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mina/RealHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/pack/ReceiveCmd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="76" selection-start-line="72" selection-start-column="76" selection-end-line="72" selection-end-column="76" />
+          <caret line="190" column="58" selection-start-line="190" selection-start-column="58" selection-end-line="190" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander01.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/ShowMValueInfoBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
+    <entry file="file://$PROJECT_DIR$/src/com/springmvc/websock/WebSocketHander.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mina/BalanceMinaClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mina-core-2.0.15.jar!/org/apache/mina/core/future/DefaultConnectFuture.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mina/RealMinaClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/listener/WebContextListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/ShowCValueInfoBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+    <entry file="file://$PROJECT_DIR$/src/com/bean/CurData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="534" column="36" selection-start-line="534" selection-start-column="36" selection-end-line="535" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/ValueInfoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/application/ValueCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="84" selection-start-line="117" selection-start-column="84" selection-end-line="117" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/tomcat-jdbc.jar!/org/apache/tomcat/jdbc/pool/DisposableConnectionFacade.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bean/UserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/ErrorCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="409" column="34" selection-start-line="409" selection-start-column="34" selection-end-line="409" selection-end-column="34" />
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/util/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="286" column="51" selection-start-line="286" selection-start-column="51" selection-end-line="286" selection-end-column="51" />
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="512" column="48" selection-start-line="512" selection-start-column="48" selection-end-line="512" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/const_value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <caret line="596" column="33" selection-start-line="596" selection-start-column="33" selection-end-line="596" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mysql/JDBC_Pool.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mysql/SqlCmd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.307517">
-          <caret line="548" column="35" selection-start-line="548" selection-start-column="35" selection-end-line="548" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="685" column="9" selection-start-line="685" selection-start-column="9" selection-end-line="685" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/springmvc/SpringMvcController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="603" column="22" selection-start-line="603" selection-start-column="22" selection-end-line="603" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bean/NormalDeviceSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52380955">
+          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
           <folding />
         </state>
       </provider>

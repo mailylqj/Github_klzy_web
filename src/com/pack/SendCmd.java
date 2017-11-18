@@ -2,7 +2,7 @@ package com.pack;
 
 
 import com.application.ValueCenter;
-import com.bean.ValueInfoBean;
+import com.bean.Token;
 import com.google.protobuf.ByteString;
 import com.ideal.logic.*;
 import com.ideal.logic.control_data.control_req;
@@ -12,7 +12,6 @@ import com.ideal.logic.server_lastestdata.unreg_server_lastestdata;
 import com.ideal.logic.server_online.reg_server_online;
 import com.ideal.logic.server_online.unreg_server_online;
 import com.mina.RealMinaClient;
-import com.mysql.SqlCmd;
 import com.util.ErrorCode;
 import com.util.Helper;
 import org.apache.log4j.Logger;
@@ -20,10 +19,7 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 import org.springframework.web.context.request.async.DeferredResult;
 
-import java.math.BigDecimal;
 import java.nio.ByteBuffer;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class SendCmd {
@@ -48,7 +44,7 @@ public class SendCmd {
 
     public void sendData(ByteBuffer byteBuffer, String key) {
         if ((!client.send(byteBuffer)) && key != null) {
-            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
+            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getUuid_deferredResult().get(key);
             Map<String, Object> ret_map = new HashMap<>();
             ret_map.put("result", ErrorCode.SEND_ERROR);
             result.setResult(ret_map);
@@ -107,8 +103,8 @@ public class SendCmd {
     }
 
 
-    public void control(String uid, String imei, int datatype, int datadecimals, int writeadd, float value, String key) {
-
+    public void control(String uid, String imei, int datatype, int datadecimals, int writeadd, float value, Token token) {
+        String key = token.getUuid()+"#"+token.getToken();
         byte[] modbus_data = Helper.getInstance().controlCmd(datatype, datadecimals, writeadd, value);
 
         ByteString uidByteString = ByteString.copyFrom(uid.getBytes());
@@ -120,92 +116,34 @@ public class SendCmd {
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
             sendData(byteBuffer, "control" + "#" + key);
+        }else{
+            DeferredResult<Object> result = (DeferredResult<Object>) valuecenter.getUuid_deferredResult().get(key);
+            Helper.getInstance().DefReturn(result,ErrorCode.REQUEST_ERROR,ErrorCode.REQUEST_ERROR_STR,token,null);
         }
     }
 
-
-    public void readModData(String uid, long Stime, long Etime, String key) {
+    public void readModData(String uid, long Stime, long Etime,Token token ) {
+        String key =token.getUuid()+"#"+token.getToken();
         long[] time = Helper.getInstance().checkTime(Stime, Etime);
-        List<Long> selecttime_list = new ArrayList<>();
-        selecttime_list.add(time[0]);
-        selecttime_list.add(time[1]);
-        selecttime_list.add((long) 0);
-        selecttime_list.add((long) 0);
-        selecttime_list = Helper.getInstance().calculatetime(selecttime_list, 1);
-        ModData(uid, selecttime_list, key);
-    }
-
-    public void readModDataPrev(String key) {
-        Map<String, Map<String, List<Long>>> moddata_map = valuecenter.getSession_selecttime();
-        Map<String, List<Long>> map = moddata_map.get(key);
-
-        if (map != null) {
-            String uid = "";
-            List<Long> list = new ArrayList<>();
-            for (Map.Entry<String, List<Long>> entry : map.entrySet()) {
-                uid = entry.getKey();
-                list = entry.getValue();
-            }
-
-            list = Helper.getInstance().calculatetime(list, 0);
-            ModData(uid, list, key);
-        } else {
-            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
-            Map<String, Object> ret_map = new HashMap<>();
-            ret_map.put("result", ErrorCode.REQUEST_ERROR);
-            result.setResult(ret_map);
-        }
-    }
-
-    public void readModDataNext(String key) {
-        Map<String, Map<String, List<Long>>> moddata_map = valuecenter.getSession_selecttime();
-        Map<String, List<Long>> map = moddata_map.get(key);
-
-        if (map != null) {
-            String uid = "";
-            List<Long> list = new ArrayList<>();
-            for (Map.Entry<String, List<Long>> entry : map.entrySet()) {
-                uid = entry.getKey();
-                list = entry.getValue();
-            }
-
-            list = Helper.getInstance().calculatetime(list, 1);
-            ModData(uid, list, key);
-        } else {
-            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
-            Map<String, Object> ret_map = new HashMap<>();
-            ret_map.put("result", ErrorCode.REQUEST_ERROR);
-            result.setResult(ret_map);
-        }
-    }
-
-    public void ModData(String uid, List<Long> list, String key) {
-        if (list != null) {
+        if (time != null) {
             ByteString uidString = ByteString.copyFromUtf8(uid);
             ByteString modAdd = ByteString.copyFrom(new byte[]{0x01});
             ByteString startAdd = ByteString.copyFrom(new byte[]{0x00, 0x00});
-
-            Map<String, List<Long>> stringListMap = new HashMap<>();
-            stringListMap.put(uid, list);
-            valuecenter.getSession_selecttime().put(key, stringListMap);
-
-            read_data_req wData_req = logic_client.modbusReadClient(uidString, modAdd, startAdd, list.get(2), list.get(3), key);
+            read_data_req wData_req = logic_client.modbusReadClient(uidString, modAdd, startAdd, time[0], time[1], key);
             String protobuf_method_name = "modbus_read";
             logic_imp imp = new logic_imp();
             com.google.protobuf.Service rpc_service = logic.logic_server.newReflectiveService(imp);
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
             sendData(byteBuffer, key);
-            //log.error("历史数据发送：   " +System.currentTimeMillis());
         } else {
-            DeferredResult<Map<String, Object>> result = (DeferredResult<Map<String, Object>>) valuecenter.getSession_deferredResult_map().get(key);
-            Map<String, Object> ret_map = new HashMap<>();
-            ret_map.put("result", ErrorCode.SELECTEND);
-            result.setResult(ret_map);
+            DeferredResult<Object> result = (DeferredResult<Object>) valuecenter.getUuid_deferredResult().get(key);
+            Helper.getInstance().DefReturn(result,ErrorCode.REQUEST_ERROR,ErrorCode.REQUEST_ERROR_STR,token,null);
         }
     }
 
-    public void readControlData(String uid, long Stime, long Etime, String key) {
+    public void readControlData(String uid, long Stime, long Etime, Token token) {
+        String key = token.getUuid()+"#"+token.getToken();
         ByteString uidString = ByteString.copyFromUtf8(uid);
         long[] time = Helper.getInstance().checkTime(Stime, Etime);
         if (time != null) {
@@ -216,10 +154,14 @@ public class SendCmd {
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
             sendData(byteBuffer, "cdata" + "#" +key);
+        }else{
+            DeferredResult<Object> result = (DeferredResult<Object>) valuecenter.getUuid_deferredResult().get(key);
+            Helper.getInstance().DefReturn(result,ErrorCode.REQUEST_ERROR,ErrorCode.REQUEST_ERROR_STR,token,null);
         }
     }
 
-    public void readAlarmData(String uid, long Stime, long Etime, String key) {
+    public void readAlarmData(String uid, long Stime, long Etime, Token token) {
+        String key = token.getUuid()+"#"+token.getToken();
         ByteString uidString = ByteString.copyFromUtf8(uid);
         long[] time = Helper.getInstance().checkTime(Stime, Etime);
         if (time != null) {
@@ -230,6 +172,9 @@ public class SendCmd {
             int method_idx = rpc_service.getDescriptorForType().findMethodByName(protobuf_method_name).getIndex();
             ByteBuffer byteBuffer = RPCPackage.PackageClientProtoData(wData_req, (short) method_idx);
             sendData(byteBuffer, "adata" + "#" +key);
+        }else{
+            DeferredResult<Object> result = (DeferredResult<Object>) valuecenter.getUuid_deferredResult().get(key);
+            Helper.getInstance().DefReturn(result,ErrorCode.REQUEST_ERROR,ErrorCode.REQUEST_ERROR_STR,token,null);
         }
     }
 

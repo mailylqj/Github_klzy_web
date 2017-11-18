@@ -6,6 +6,7 @@ import com.google.protobuf.ByteString;
 import com.ideal.logic.control_data;
 import com.mysql.SqlCmd;
 import com.pack.CRCUtil;
+import org.springframework.web.context.request.async.DeferredResult;
 
 import java.math.BigDecimal;
 import java.nio.ByteBuffer;
@@ -23,6 +24,7 @@ public class Helper {
         return instance;
     }
 
+
     /**
      * 实时数据解析
      */
@@ -30,20 +32,19 @@ public class Helper {
         ByteString msg = data.getModbus_msg();
         ByteString alarm = data.getAlarm_code();
         long time = data.getRecord_time();
-        List<ValueInfoBean> list =  SqlCmd.getInstance().getconfigfile(uid,1);
-        List<String> alarm_list = ExCurAlarmData(uid,list,9, alarm.toByteArray());
-        CurData curData = ExCValueData(uid, list,9, msg.toByteArray(), time,alarm_list);
+        List<ValueInfoBean> list = SqlCmd.getInstance().getconfigfile(uid, 1);
+        List<String> alarm_list = ExCurAlarmData(uid, list, 9, alarm.toByteArray());
+        CurData curData = ExCValueData(uid, list, 9, msg.toByteArray(), time, alarm_list);
         valueCenter.getAll_ExData().put(uid, curData);
     }
 
     /**
-     *
      * @param uid
      * @param userlevel
      * @param alarm
      * @return
      */
-    public List<String> ExCurAlarmData(String uid , List<ValueInfoBean> res_list, int userlevel, byte[] alarm) {
+    public List<String> ExCurAlarmData(String uid, List<ValueInfoBean> res_list, int userlevel, byte[] alarm) {
         List<ValueInfoBean> config_list = res_list;
         List<ValueInfoBean> alarm_config_list = new ArrayList<>();
         for (ValueInfoBean bean : config_list) {
@@ -77,6 +78,7 @@ public class Helper {
 
     /**
      * 实时数据解析
+     *
      * @param uid
      * @param list
      * @param userlevel
@@ -102,11 +104,10 @@ public class Helper {
                 int strlen = hex.length();
                 for (int m = 0; m < 16; m++) {
                     value = Integer.parseInt(hex.substring(strlen - 1 - m, strlen - m));
-                    ValueInfoBean bean  = list.get(i * 16 + m);
+                    ValueInfoBean bean = list.get(i * 16 + m);
                     if (bean.getType() == 0) {
-                        if (userlevel >= bean.getPermission())
-                        {
-                            ShowCValueInfoBean data  = new ShowCValueInfoBean(bean.getName(),value,bean.getUnit(),bean.getRwType(),bean.getPermission(),bean.getShowType(),bean.getMax(),bean.getMin(),bean.getWriteadd());
+                        if (userlevel >= bean.getPermission()) {
+                            ShowCValueInfoBean data = new ShowCValueInfoBean(bean.getName(), value, bean.getUnit(), bean.getRwType(), bean.getPermission(), bean.getShowType(), bean.getMax(), bean.getMin(), bean.getWriteadd());
                             data_list.add(data);
                         }
                         runtime = i * 16 + m;
@@ -150,21 +151,20 @@ public class Helper {
                         i = i + 2;
                         value = byteServer.byteArrayToValue(b, dataType, 0, formatLen);
                     }
-                    if (userlevel >= bean.getPermission())
-                    {
-                        ShowCValueInfoBean data  = new ShowCValueInfoBean(bean.getName(),value,bean.getUnit(),bean.getRwType(),bean.getPermission(),bean.getShowType(),bean.getMax(),bean.getMin(),bean.getWriteadd());
+                    if (userlevel >= bean.getPermission()) {
+                        ShowCValueInfoBean data = new ShowCValueInfoBean(bean.getName(), value, bean.getUnit(), bean.getRwType(), bean.getPermission(), bean.getShowType(), bean.getMax(), bean.getMin(), bean.getWriteadd());
                         data_list.add(data);
                     }
                 }
             }
         }
-        return new CurData(uid,date,data_list,alarm_list);
+        return new CurData(uid, date, data_list, alarm_list);
     }
 
     /**
-     *  历史数据解析
+     * 历史数据解析
      */
-    public ModbusData ExMValueData(String uid, List<ValueInfoBean> list, int userlevel, byte[] modbus, long date) {
+    public ModbusData ExMValueData(List<ValueInfoBean> list, int userlevel, byte[] modbus, long date) {
         List<ShowMValueInfoBean> data_list = new ArrayList<>();
 
         int runtime = 0;
@@ -181,11 +181,10 @@ public class Helper {
                 int strlen = hex.length();
                 for (int m = 0; m < 16; m++) {
                     value = Integer.parseInt(hex.substring(strlen - 1 - m, strlen - m));
-                    ValueInfoBean bean  = list.get(i * 16 + m);
+                    ValueInfoBean bean = list.get(i * 16 + m);
                     if (bean.getType() == 0) {
-                        if (userlevel >= bean.getPermission())
-                        {
-                            ShowMValueInfoBean data  = new ShowMValueInfoBean(bean.getName(),value,bean.getUnit());
+                        if (userlevel >= bean.getPermission()) {
+                            ShowMValueInfoBean data = new ShowMValueInfoBean(bean.getName(), value, bean.getUnit());
                             data_list.add(data);
                         }
                         runtime = i * 16 + m;
@@ -197,7 +196,7 @@ public class Helper {
             } else {
                 runtime++;
                 if (list.size() > runtime) {
-                   ValueInfoBean bean = list.get(runtime);
+                    ValueInfoBean bean = list.get(runtime);
                     if (bean.getType() != 1)
                         break;
 
@@ -229,15 +228,14 @@ public class Helper {
                         i = i + 2;
                         value = byteServer.byteArrayToValue(b, dataType, 0, formatLen);
                     }
-                    if (userlevel >= bean.getPermission())
-                    {
-                        ShowMValueInfoBean data  = new ShowMValueInfoBean(bean.getName(),value,bean.getUnit());
+                    if (userlevel >= bean.getPermission()) {
+                        ShowMValueInfoBean data = new ShowMValueInfoBean(bean.getName(), value, bean.getUnit());
                         data_list.add(data);
                     }
                 }
             }
         }
-        return new ModbusData(uid,date,data_list);
+        return new ModbusData(date, data_list);
     }
 
     /**
@@ -428,8 +426,9 @@ public class Helper {
         else
             start_time = Stime;
 
-        if (start_time >= end_time)
-            start_time = end_time - 1000 * 60 * 10;
+//        if (start_time == end_time) {
+//            start_time = end_time - 1000 * 1;
+//        }
 
         return new long[]{start_time, end_time};
     }
@@ -557,9 +556,54 @@ public class Helper {
     }
 
     //
-    public List<ValueInfoBean> getConfig(){
+    public List<ValueInfoBean> getConfig() {
 
         return null;
     }
 
+    /**
+     * 获取当前用户等级
+     *
+     * @param session
+     * @param key
+     * @return
+     */
+    public int getUserLevel(String session, String key) {
+        if (valueCenter.getUuid_userinfo().get(session) != null) {
+            int userlevel = valueCenter.getUuid_userinfo().get(session).getLevel();
+            return userlevel;
+        } else {
+            DeferredResult<Map<String, Integer>> result = (DeferredResult<Map<String, Integer>>) valueCenter.getUuid_deferredResult().get(key);
+            Map<String, Integer> map = new HashMap<>();
+            map.put("result", ErrorCode.UNLOGIN);
+            result.setResult(map);
+            return ErrorCode.UNLOGIN;
+        }
+    }
+
+    public void DefReturn(DeferredResult<Object> deferredResult, int result, String message,Token token, Object data) {
+        String token_str= null,uuid=null;
+        if (token != null) {
+            token_str = token.getToken();
+            uuid = token.getUuid();
+            if (token_str != null) {
+                valueCenter.getToken_map().remove(token_str);
+               //valueCenter.getToken_map().put(token_str,false);
+            }
+            if (uuid != null)
+                token_str = JwtUtil.createJWT(uuid);
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("result", result);
+        map.put("message", message);
+        map.put("token", token_str);
+        map.put("data", data);
+
+        if (deferredResult != null)
+            deferredResult.setResult(map);
+        if (token_str != null) {
+            valueCenter.getToken_map().put(token_str, false);
+        }
+        valueCenter.getToken_map().put("eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxM2UyYmQ1NWIxYTk0NjMzYWRjMjAzNDlkZGVjZWI5ZSIsImF1ZCI6IjE1MDk5MzU1Mzk3ODcifQ.MQbuzqiwZWkxJBA1U1NkdgpCLIWedjWgN5k5IlVxWew",false);
+    }
 }

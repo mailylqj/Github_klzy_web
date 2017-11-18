@@ -1,5 +1,6 @@
 package com.util;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 
 public class ByteServer {
@@ -239,4 +240,51 @@ public class ByteServer {
         }
         return b_rst;
     }
+
+    public  byte[] StringToByteArray(String s) {
+        try {
+            return s.getBytes("ISO-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public  String ByteArrayToString(byte b[]) {
+        try {
+            return new String(b, "ISO-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            //IdealLogger.Instance().PutException(e);
+        }
+        return null;
+    }
+
+
+    // 16进制字符串转字节数组
+    public byte[] hexString2Bytes(String hex) {
+        if ((hex == null) || (hex.equals(""))){
+            return null;
+        }
+        else if (hex.length()%2 != 0){
+            return null;
+        }
+        else{
+            hex = hex.toUpperCase();
+            int len = hex.length()/2;
+            byte[] b = new byte[len];
+            char[] hc = hex.toCharArray();
+            for (int i=0; i<len; i++){
+                int p=2*i;
+                b[i] = (byte) (charToByte(hc[p]) << 4 | charToByte(hc[p+1]));
+            }
+            return b;
+        }
+    }
+
+    private static byte charToByte(char c) {
+        return (byte) "0123456789ABCDEF".indexOf(c);
+    }
+
+
+
 }

@@ -13,6 +13,8 @@ public class ShowMValueInfoBean {
     // 单位
     private String unit;
 
+
+
     public ShowMValueInfoBean(String name, float value, String unit) {
         this.name = name;
         this.value = value;

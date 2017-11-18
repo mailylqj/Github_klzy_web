@@ -4,6 +4,7 @@ package com.util;
 
 public class const_value
 {
+	public static  final String key = "klzy83203826";
 	//	
 	public static final int DTU1_HEAD = 0x44545531;
 	public static final int DTU2_HEAD = 0x44545532;
@@ -54,5 +55,10 @@ public class const_value
 	public static final String Host = "101.132.136.210";
 	//--------local test------
 //	public static final String Host = "192.168.8.101";
+
+//	public static final String SqlAdd = "192.168.8.101";
+
+	public static final String SqlAdd = "rm-uf641vi1s896vlis1o.mysql.rds.aliyuncs.com";
+
 
 }

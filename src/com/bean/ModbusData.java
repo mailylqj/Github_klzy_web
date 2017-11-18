@@ -6,23 +6,15 @@ import java.util.List;
 import java.util.Map;
 
 public class ModbusData {
-    String uid;
+
     long time;
     List<ShowMValueInfoBean> value_list;
 
     /*************************************************/
-    public ModbusData(String uid, long time, List<ShowMValueInfoBean> value_list) {
-        this.uid = uid;
+    public ModbusData(long time, List<ShowMValueInfoBean> value_list) {
+
         this.time = time;
         this.value_list = value_list;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
     }
 
     public long getTime() {

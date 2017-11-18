@@ -41,8 +41,10 @@ public class RealHandler extends IoHandlerAdapter {
 
 	@Override
 	public void sessionClosed(IoSession iosession) throws Exception {
-		//System.out.println("real——客户端会话关闭");
+		System.out.println("real——客户端会话关闭");
 		RealMinaClient.getInstance().getSessions_deque().removeFirstOccurrence(iosession);
+		if (RealMinaClient.getInstance().getSessions_deque().size() ==0)
+			BalanceMinaClient.getInstance().start();
 		super.sessionClosed(iosession);
 	}
 
@@ -54,7 +56,7 @@ public class RealHandler extends IoHandlerAdapter {
 
 	@Override
 	public void sessionIdle(IoSession iosession, IdleStatus idlestatus) throws Exception {
-		//System.out.println("real——客户端会话休眠");
+		//System.out.println("active:"+iosession.isActive()+" con:"+iosession.isConnected()+" close:"+iosession.isClosing()+"  "+idlestatus.toString());
 		super.sessionIdle(iosession, idlestatus);
 	}
 
